@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crossbody Leather Bag - Limited Time Offer</title>
+    <title>Vintage Canvas Backpack - Tas Premium Elegan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+        :root {
+            --primary: #8B5A2B;
+            --secondary: #D4AF37;
+            --dark: #3A2C1A;
+            --light: #F5F5F5;
+            --accent: #A67C52;
         }
         
         body {
-            background-color: #f8f8f8;
-            color: #333;
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            background: linear-gradient(135deg, #F9F5F0 0%, #F0E6D9 100%);
             line-height: 1.6;
         }
         
@@ -25,298 +29,347 @@
             padding: 0 20px;
         }
         
-        /* Header Styles */
+        /* Header */
         header {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 100;
         }
         
-        .header-container {
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
         }
         
         .logo {
             font-size: 24px;
-            font-weight: bold;
-            color: #000;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--secondary);
         }
         
         .cta-button {
-            background-color: #000;
-            color: #fff;
+            background-color: var(--secondary);
+            color: var(--dark);
             padding: 10px 25px;
             border-radius: 30px;
+            font-weight: 600;
             text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .cta-button:hover {
-            background-color: #333;
             transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
             padding: 60px 0;
+            background: url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            position: relative;
+            color: white;
             text-align: center;
         }
         
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(58, 44, 26, 0.8), rgba(139, 90, 43, 0.8));
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
         .hero h1 {
-            font-size: 42px;
+            font-size: 48px;
             margin-bottom: 20px;
-            font-weight: 800;
+            font-weight: 700;
         }
         
         .hero p {
             font-size: 20px;
             margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
         }
         
         .price-tag {
-            background-color: #ff4444;
-            color: white;
+            background-color: rgba(255,255,255,0.9);
+            color: var(--primary);
+            display: inline-block;
             padding: 15px 30px;
             border-radius: 5px;
-            display: inline-block;
+            font-size: 28px;
+            font-weight: 700;
             margin-bottom: 30px;
-            font-size: 24px;
-            font-weight: bold;
         }
         
         .original-price {
             text-decoration: line-through;
-            font-size: 18px;
+            font-size: 20px;
             color: #777;
             margin-right: 10px;
         }
         
         .discount-badge {
-            background-color: #000;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 3px;
+            background-color: #E74C3C;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
             font-size: 16px;
+            font-weight: 600;
+            display: inline-block;
             margin-left: 10px;
+            vertical-align: middle;
         }
         
         .countdown {
-            background-color: #fff;
+            background-color: rgba(0,0,0,0.7);
             padding: 15px;
             border-radius: 5px;
+            margin: 20px auto;
             max-width: 500px;
-            margin: 0 auto 30px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
         
         .countdown h3 {
+            margin-top: 0;
             margin-bottom: 10px;
         }
         
-        .timer {
+        .countdown-timer {
             display: flex;
             justify-content: center;
             gap: 15px;
         }
         
-        .timer-segment {
+        .countdown-item {
+            background-color: white;
+            color: var(--primary);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 24px;
+            min-width: 60px;
             text-align: center;
         }
         
-        .timer-number {
-            font-size: 28px;
-            font-weight: bold;
-            background-color: #000;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        
-        .timer-label {
+        .countdown-label {
             font-size: 12px;
-            margin-top: 5px;
-            text-transform: uppercase;
+            display: block;
+            color: var(--dark);
         }
         
-        /* Product Gallery */
-        .product-gallery {
+        /* Features */
+        .features {
             padding: 60px 0;
-            background-color: #fff;
+            background-color: white;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
-            font-size: 32px;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: var(--primary);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+            margin: 15px auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        
+        /* Gallery */
+        .gallery {
+            padding: 60px 0;
+            background-color: var(--light);
         }
         
         .gallery-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
+            margin-top: 40px;
         }
         
         .gallery-item {
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
         }
         
-        .gallery-item img {
+        .gallery-item img, .gallery-item video {
             width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
         }
         
-        .gallery-item:hover img {
-            transform: scale(1.03);
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 60px 0;
-            background-color: #f8f8f8;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-item {
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        
-        .feature-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-            color: #000;
-        }
-        
-        .feature-item h3 {
-            margin-bottom: 10px;
+        .gallery-item:hover img, .gallery-item:hover video {
+            transform: scale(1.05);
         }
         
         /* Testimonials */
         .testimonials {
             padding: 60px 0;
-            background-color: #fff;
+            background-color: white;
         }
         
-        .testimonial-grid {
+        .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
         
-        .testimonial-item {
-            background-color: #f8f8f8;
-            padding: 25px;
+        .testimonial-card {
+            background-color: var(--light);
+            padding: 30px;
             border-radius: 8px;
-            position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         }
         
-        .testimonial-item:before {
-            content: '"';
-            font-size: 60px;
-            position: absolute;
-            top: 10px;
-            left: 15px;
-            color: rgba(0,0,0,0.1);
-            font-family: serif;
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
         }
         
-        .testimonial-content {
-            margin-bottom: 15px;
-            font-style: italic;
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
         }
         
         .testimonial-author {
-            font-weight: bold;
+            font-weight: 700;
         }
         
-        /* FAQ Section */
+        .testimonial-rating {
+            color: var(--secondary);
+            margin-top: 5px;
+        }
+        
+        /* FAQ */
         .faq {
             padding: 60px 0;
-            background-color: #f8f8f8;
+            background-color: var(--light);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .faq-item {
-            background-color: #fff;
             margin-bottom: 15px;
+            border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
         
         .faq-question {
             padding: 20px;
-            background-color: #000;
-            color: #fff;
+            background-color: white;
+            font-weight: 600;
             cursor: pointer;
-            font-weight: bold;
-            position: relative;
-        }
-        
-        .faq-question:after {
-            content: '+';
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 20px;
-        }
-        
-        .faq-question.active:after {
-            content: '-';
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .faq-answer {
             padding: 0 20px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
+            transition: max-height 0.3s, padding 0.3s;
+            background-color: #f9f9f9;
         }
         
-        .faq-answer.show {
-            padding: 20px;
+        .faq-item.active .faq-answer {
             max-height: 500px;
+            padding: 20px;
         }
         
-        /* Guarantee Section */
+        /* Guarantee */
         .guarantee {
             padding: 60px 0;
-            background-color: #fff;
+            background-color: white;
             text-align: center;
         }
         
         .guarantee-badge {
-            font-size: 60px;
-            margin-bottom: 20px;
-            color: #000;
+            background-color: var(--secondary);
+            color: var(--dark);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 40px;
         }
         
         /* CTA Section */
         .cta-section {
             padding: 80px 0;
-            background: linear-gradient(135deg, #000 0%, #333 100%);
-            color: #fff;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            color: white;
             text-align: center;
         }
         
@@ -326,7 +379,7 @@
         }
         
         .cta-section p {
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 30px;
             max-width: 700px;
             margin-left: auto;
@@ -334,91 +387,136 @@
         }
         
         .cta-button-large {
-            background-color: #ff4444;
-            color: #fff;
+            background-color: var(--secondary);
+            color: var(--dark);
             padding: 15px 40px;
             border-radius: 30px;
+            font-weight: 600;
             text-decoration: none;
-            font-weight: bold;
             font-size: 18px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             display: inline-block;
-            transition: all 0.3s ease;
         }
         
         .cta-button-large:hover {
-            background-color: #ff3333;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 68, 68, 0.3);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
         }
         
         /* Footer */
         footer {
-            background-color: #000;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
         }
         
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            color: var(--secondary);
+            margin-top: 0;
             margin-bottom: 20px;
         }
         
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
         .footer-links a {
-            color: #fff;
+            color: #ddd;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary);
         }
         
         .copyright {
-            color: #aaa;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
             font-size: 14px;
+            color: #aaa;
         }
         
         /* Popup */
         .popup {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
+            bottom: 20px;
+            right: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 20px;
+            max-width: 350px;
+            transform: translateY(100px);
             opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
+            transition: all 0.5s;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
         }
         
         .popup.show {
+            transform: translateY(0);
             opacity: 1;
-            visibility: visible;
+        }
+        
+        .popup-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
         }
         
         .popup-content {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            max-width: 500px;
-            text-align: center;
-            position: relative;
+            flex: 1;
         }
         
-        .close-popup {
+        .popup-close {
             position: absolute;
             top: 10px;
-            right: 15px;
-            font-size: 24px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 16px;
             cursor: pointer;
+            color: #777;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 32px;
+                font-size: 36px;
             }
             
             .hero p {
@@ -426,119 +524,156 @@
             }
             
             .section-title {
-                font-size: 28px;
+                font-size: 30px;
             }
             
-            .timer-number {
-                font-size: 20px;
+            .price-tag {
+                font-size: 24px;
+                padding: 10px 20px;
+            }
+            
+            .original-price {
+                font-size: 16px;
+            }
+            
+            .discount-badge {
+                font-size: 14px;
+                padding: 3px 10px;
             }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="container header-container">
-            <div class="logo">LUXE BAGS</div>
-            <a href="#order" class="cta-button">ORDER NOW</a>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <span>VintageCanvas</span>
+            </div>
+            <a href="#order" class="cta-button">PESAN SEKARANG</a>
         </div>
     </header>
     
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>Premium Crossbody Leather Bag - Limited Edition</h1>
-            <p>Elevate your style with our trendy, waterproof, and ultra-comfortable crossbody bag. Perfect for any occasion!</p>
+        <div class="hero-content">
+            <h1>Vintage Canvas Backpack</h1>
+            <p>Tas premium dengan desain elegan yang tak lekang oleh waktu. Kenyamanan dan gaya dalam satu paket sempurna.</p>
             
             <div class="price-tag">
-                <span class="original-price">Rp358,000</span>
-                Rp179,000
+                <span class="original-price">Rp331,000</span>
+                Rp165,500
                 <span class="discount-badge">50% OFF</span>
             </div>
             
             <div class="countdown">
-                <h3>HURRY! OFFER ENDS IN:</h3>
-                <div class="timer">
-                    <div class="timer-segment">
-                        <div class="timer-number" id="hours">23</div>
-                        <div class="timer-label">Hours</div>
+                <h3>PROMO BERAKHIR DALAM:</h3>
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <span id="hours">12</span>
+                        <span class="countdown-label">Jam</span>
                     </div>
-                    <div class="timer-segment">
-                        <div class="timer-number" id="minutes">59</div>
-                        <div class="timer-label">Minutes</div>
+                    <div class="countdown-item">
+                        <span id="minutes">45</span>
+                        <span class="countdown-label">Menit</span>
                     </div>
-                    <div class="timer-segment">
-                        <div class="timer-number" id="seconds">59</div>
-                        <div class="timer-label">Seconds</div>
+                    <div class="countdown-item">
+                        <span id="seconds">30</span>
+                        <span class="countdown-label">Detik</span>
                     </div>
                 </div>
             </div>
             
-            <a href="#order" class="cta-button">GET YOURS NOW</a>
+            <a href="#order" class="cta-button">DAPATKAN DISKON 50%</a>
         </div>
     </section>
     
-    <!-- Product Gallery -->
-    <section class="product-gallery">
+    <!-- Features -->
+    <section class="features">
         <div class="container">
-            <h2 class="section-title">Stylish & Functional Design</h2>
-            <div class="gallery-container">
-                <div class="gallery-item">
-                    <img src="https://cdn.webfastcdn.com/image/997e966947d82c6aba32b0aceb3b77207efa6f43-600.jpeg" alt="Crossbody Bag Front View">
+            <h2 class="section-title">Keunggulan Tas Kami</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Material Premium</h3>
+                    <p>Terbuat dari kanvas berkualitas tinggi yang tahan lama dan nyaman digunakan sehari-hari.</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.webfastcdn.com/image/3944faa05572f8259b3c5a0b61b2d617ab1d9d54-600.jpeg" alt="Crossbody Bag Side View">
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Desain Elegan</h3>
+                    <p>Gaya vintage yang timeless dengan sentuhan modern, cocok untuk berbagai kesempatan.</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.fastcdnshop.com/image/8faed1905462e6d4a5c6f05270bd9be82a50e05b.gif" alt="Crossbody Bag GIF">
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Nyaman Dipakai</h3>
+                    <p>Tali bahu yang empuk dan dapat disesuaikan untuk kenyamanan maksimal sepanjang hari.</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.webfastcdn.com/image/d84d68f28b988f1332154653b0142ca75c2d3f59.jpeg" alt="Crossbody Bag Color Variants">
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3>Kapasitas Luas</h3>
+                    <p>Banyak kompartemen untuk menyimpan laptop, buku, dan kebutuhan harian Anda.</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.webfastcdn.com/image/31e98d8c4ea0e7037cf3954580ddd5a469cb17cf.jpeg" alt="Crossbody Bag Interior">
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Kualitas Terjamin</h3>
+                    <p>Setiap tas melalui proses kontrol kualitas ketat sebelum sampai ke tangan Anda.</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.webfastcdn.com/image/5ed299c19cd9dee1c896b6d0ba348dd9a484ee1f-600.jpeg" alt="Crossbody Bag Strap Detail">
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Gratis Pengiriman</h3>
+                    <p>Pengiriman cepat ke seluruh Indonesia dengan kemasan khusus untuk perlindungan maksimal.</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Features Section -->
-    <section class="features">
+    <!-- Gallery -->
+    <section class="gallery">
         <div class="container">
-            <h2 class="section-title">Why You'll Love This Bag</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">💧</div>
-                    <h3>Waterproof Material</h3>
-                    <p>Made with high-quality PU leather that repels water, keeping your belongings safe and dry in any weather.</p>
+            <h2 class="section-title">Galeri Produk</h2>
+            
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="https://pic.compgoo.com/ueditor/autoLoad/45fae7dc2d21a4c539bb3af7d2c1f36563210011470301005995730EN29b650d2c3bd0e705f1b050fbf8b42d1b.jpg" alt="Vintage Canvas Backpack - Tampak Depan">
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">✨</div>
-                    <h3>Easy to Clean</h3>
-                    <p>Just wipe with a damp cloth to maintain its elegant look - no special cleaning required.</p>
+                <div class="gallery-item">
+                    <video autoplay loop muted playsinline>
+                        <source src="https://static.compgoo.com/ueditor/autoLoad/9b9b335175ca83e116f8ef27f4aa111c63210011470301005995730EN1c81e728d9d4c2f636f067f89cc14862c.gif" type="video/mp4">
+                    </video>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">👜</div>
-                    <h3>Spacious & Organized</h3>
-                    <p>20.5 x 15 x 6.5 cm dimensions with multiple compartments to keep your essentials neatly arranged.</p>
+                <div class="gallery-item">
+                    <img src="https://pic.compgoo.com/ueditor/autoLoad/904a0adda80cb957274b31a841a797f363210011470301005995730EN2cc9581a78c60d5a8ec0ed54c261f1a05.jpg" alt="Vintage Canvas Backpack - Detail Tali">
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">👚</div>
-                    <h3>Versatile Style</h3>
-                    <p>Perfect for work, travel, or casual outings - complements any outfit effortlessly.</p>
+                <div class="gallery-item">
+                    <video autoplay loop muted playsinline>
+                        <source src="https://pic.compgoo.com/ueditor/autoLoad/e8d2cf5bbae30db5edd4fba5213aafb763210011470301005995730EN2adfd3c3a33357c11b0778f6e1479ccc9.gif" type="video/mp4">
+                    </video>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Adjustable Strap</h3>
-                    <p>130cm adjustable strap for comfortable wear at your preferred length.</p>
+                <div class="gallery-item">
+                    <img src="https://pic.compgoo.com/ueditor/autoLoad/7f8b1c190d82c83a2fd8ca10099097c963210011470301005995730EN2285b6b6588ba0961414c92e8869bcda3.jpg" alt="Vintage Canvas Backpack - Tampak Samping">
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🌈</div>
-                    <h3>Multiple Colors</h3>
-                    <p>Available in light blue, gray, white, purple, and dark blue to match your personal style.</p>
+                <div class="gallery-item">
+                    <img src="https://pic.compgoo.com/ueditor/autoLoad/83764d3c01498e001a6672535b521e2963210011470301005995730EN27faad88a576ecf8a4b3bc1e2ef7d3426.jpg" alt="Vintage Canvas Backpack - Kompartemen Dalam">
                 </div>
             </div>
         </div>
@@ -547,108 +682,208 @@
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">What Our Customers Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        This bag exceeded my expectations! The quality is amazing and it fits all my daily essentials perfectly. I get compliments every time I wear it.
+            <h2 class="section-title">Apa Kata Pelanggan Kami?</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-author">Sarah, 28</div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
                     </div>
-                    <div class="testimonial-author">- Sarah J., Jakarta</div>
+                    <p>"Tas ini benar-benar mengubah gaya harian saya! Materialnya sangat premium dan desainnya sangat elegan. Sudah 3 bulan dipakai setiap hari tapi masih seperti baru."</p>
                 </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        I've been using this bag daily for 3 months and it still looks brand new. The waterproof feature saved me during rainy season!
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Rizky" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-author">Rizky, 24</div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
                     </div>
-                    <div class="testimonial-author">- Dian P., Bandung</div>
+                    <p>"Sebagai mahasiswa, saya butuh tas yang kuat untuk laptop dan buku. Tas ini sempurna! Ringan tapi kapasitasnya besar. Sudah jatuh beberapa kali tapi tetap awet."</p>
                 </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        The adjustable strap makes it so comfortable to wear all day. I love how it transitions seamlessly from work to evening outings.
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dewi" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-author">Dewi, 35</div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
                     </div>
-                    <div class="testimonial-author">- Rina M., Surabaya</div>
+                    <p>"Saya suka sekali dengan detail-detail kecilnya. Kualitas jahitan sangat rapi dan banyak kantong tersembunyi yang berguna. Worth every penny!"</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section class="faq">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <div class="faq-question">What are the dimensions of the bag?</div>
-                <div class="faq-answer">
-                    The bag measures 20.5 x 15 x 6.5 cm (8.07 x 5.9 x 2.56 inches) with a total length of the adjustable strap at 130 cm.
+            <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Berapa ukuran tas ini?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ukuran tas adalah 30cm (tinggi) x 40cm (lebar) x 15cm (dalam), cukup untuk laptop 15 inci, buku, dan kebutuhan harian lainnya.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">What colors are available?</div>
-                <div class="faq-answer">
-                    We currently offer this crossbody bag in light blue, gray, white, purple, and dark blue.
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Apa saja yang termasuk dalam paket pembelian?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Anda akan menerima 1 Vintage Canvas Backpack dengan dust bag eksklusif dan kartu garansi resmi.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Is the material really waterproof?</div>
-                <div class="faq-answer">
-                    Yes! The PU leather material is completely waterproof, making it perfect for rainy weather or accidental spills.
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Bagaimana cara perawatannya?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Gunakan sikat lembut untuk membersihkan debu. Jika terkena noda, gunakan sabun lembut dan lap basah. Hindari mesin cuci dan pengering.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">How do I clean the bag?</div>
-                <div class="faq-answer">
-                    Simply wipe with a damp cloth. For tougher stains, use mild soap with water. Avoid harsh chemicals or abrasive cleaners.
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Berapa lama waktu pengiriman?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pengiriman biasanya memakan waktu 2-5 hari kerja tergantung lokasi. Kami menggunakan jasa pengiriman terpercaya dengan sistem pelacakan.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">What's your return policy?</div>
-                <div class="faq-answer">
-                    We offer a 30-day money-back guarantee if you're not completely satisfied with your purchase.
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Apakah ada garansi?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, kami memberikan garansi 1 tahun untuk kerusakan akibat cacat produksi. Garansi tidak mencakup kerusakan akibat penggunaan tidak wajar.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Guarantee Section -->
+    <!-- Guarantee -->
     <section class="guarantee">
         <div class="container">
-            <div class="guarantee-badge">✓</div>
-            <h2>100% Satisfaction Guarantee</h2>
-            <p>We stand behind our products. If you're not completely satisfied with your purchase, simply return it within 30 days for a full refund.</p>
+            <div class="guarantee-badge">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>100% Garansi Kepuasan</h2>
+            <p>Jika Anda tidak puas dengan produk kami dalam 30 hari, kami akan mengembalikan uang Anda tanpa pertanyaan.</p>
         </div>
     </section>
     
     <!-- CTA Section -->
     <section class="cta-section" id="order">
         <div class="container">
-            <h2>Limited Time Offer - 50% OFF</h2>
-            <p>Don't miss this exclusive deal! Our premium crossbody bags are selling fast at this discounted price. Order now before the timer runs out!</p>
-            <a href="https://luna.orderonline.id/crossbody-leather-bag-kode-201" class="cta-button-large">GET YOUR BAG NOW</a>
+            <h2>Jangan Lewatkan Kesempatan Ini!</h2>
+            <p>Diskon 50% hanya berlaku untuk 100 pembeli pertama. Pesan sekarang sebelum kehabisan!</p>
+            
+            <div class="price-tag" style="margin-bottom: 30px;">
+                <span class="original-price">Rp331,000</span>
+                Rp165,500
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            
+            <a href="https://luna.orderonline.id/vintage-canvas-backpack" class="cta-button-large">PESAN SEKARANG</a>
         </div>
     </section>
     
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Shipping Info</a>
-                <a href="#">Contact Us</a>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Tentang Kami</h3>
+                    <p>VintageCanvas menghadirkan produk fashion berkualitas tinggi dengan desain timeless yang tak lekang oleh waktu.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Informasi</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Bantuan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">Pengiriman</a></li>
+                        <li><a href="#">Pembayaran</a></li>
+                        <li><a href="#">Retur & Garansi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Pembayaran</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                        <i class="fab fa-cc-visa" style="font-size: 30px;"></i>
+                        <i class="fab fa-cc-mastercard" style="font-size: 30px;"></i>
+                        <i class="fab fa-cc-paypal" style="font-size: 30px;"></i>
+                        <i class="fas fa-money-bill-wave" style="font-size: 30px;"></i>
+                    </div>
+                </div>
             </div>
+            
             <div class="copyright">
-                © 2023 Luxe Bags. All Rights Reserved.
+                &copy; 2023 VintageCanvas. All Rights Reserved.
             </div>
         </div>
     </footer>
     
     <!-- Popup -->
     <div class="popup" id="popup">
+        <button class="popup-close" id="popup-close">&times;</button>
+        <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Customer" class="popup-avatar">
         <div class="popup-content">
-            <span class="close-popup">&times;</span>
-            <h3>SPECIAL OFFER JUST FOR YOU!</h3>
-            <p>Get an additional 10% off your first order when you order within the next 10 minutes!</p>
-            <p>Use code: <strong>WELCOME10</strong> at checkout</p>
-            <a href="https://luna.orderonline.id/crossbody-leather-bag-kode-201" class="cta-button">CLAIM YOUR DISCOUNT</a>
+            <strong>Lisa dari Jakarta baru saja memesan!</strong>
+            <p>"Tasnya keren banget! Kualitasnya melebihi ekspektasi."</p>
+            <small>2 menit yang lalu</small>
         </div>
     </div>
     
@@ -674,25 +909,18 @@
         updateCountdown();
         
         // FAQ Accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        
-        faqQuestions.forEach(question => {
+        document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const isActive = question.classList.contains('active');
+                const item = question.parentNode;
+                item.classList.toggle('active');
                 
-                // Close all answers first
-                document.querySelectorAll('.faq-answer').forEach(ans => {
-                    ans.classList.remove('show');
-                });
-                document.querySelectorAll('.faq-question').forEach(q => {
-                    q.classList.remove('active');
-                });
-                
-                // Open current if it wasn't active
-                if (!isActive) {
-                    question.classList.add('active');
-                    answer.classList.add('show');
+                const icon = question.querySelector('i');
+                if (item.classList.contains('active')) {
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                } else {
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
                 }
             });
         });
@@ -700,18 +928,38 @@
         // Popup
         setTimeout(() => {
             document.getElementById('popup').classList.add('show');
-        }, 10000); // Show popup after 10 seconds
+        }, 5000);
         
-        document.querySelector('.close-popup').addEventListener('click', () => {
+        document.getElementById('popup-close').addEventListener('click', () => {
             document.getElementById('popup').classList.remove('show');
         });
         
-        // Show popup when user tries to leave
-        window.addEventListener('mouseout', (e) => {
-            if (e.clientY < 0) {
-                document.getElementById('popup').classList.add('show');
+        // Show popup every 2 minutes
+        setInterval(() => {
+            const popup = document.getElementById('popup');
+            if (!popup.classList.contains('show')) {
+                // Update popup content with random data
+                const names = ['Andi', 'Budi', 'Citra', 'Dewi', 'Eka', 'Fajar'];
+                const cities = ['Jakarta', 'Bandung', 'Surabaya', 'Medan', 'Makassar', 'Yogyakarta'];
+                const comments = [
+                    'Baru saja memesan 2 tas!',
+                    'Kualitasnya sangat memuaskan.',
+                    'Pengirimannya cepat sekali.',
+                    'Desainnya elegan banget!',
+                    'Harga diskonnya worth it!'
+                ];
+                
+                const randomName = names[Math.floor(Math.random() * names.length)];
+                const randomCity = cities[Math.floor(Math.random() * cities.length)];
+                const randomComment = comments[Math.floor(Math.random() * comments.length)];
+                
+                popup.querySelector('.popup-content strong').textContent = 
+                    `${randomName} dari ${randomCity} baru saja memesan!`;
+                popup.querySelector('.popup-content p').textContent = `"${randomComment}"`;
+                
+                popup.classList.add('show');
             }
-        });
+        }, 120000);
     </script>
 </body>
 </html>
